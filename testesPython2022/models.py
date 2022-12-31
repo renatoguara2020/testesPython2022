@@ -25,7 +25,7 @@ class Funcionario(models.Model):
         blank=False
     )
 
-    tempo_de_servico = models.IntegerField(
+    tempo_de_servico = models.PositiveSmallIntegerField(
         default=0,
         null=False,
         blank=False
@@ -37,7 +37,13 @@ class Funcionario(models.Model):
         null=False,
         blank=False
     )
-
+    
+    email = models.EmailField(
+        isEmpty = False,
+        isUnique = True,
+    )
+ 
+ 
     objetos = models.Manager()
 
     def __str__(self):
