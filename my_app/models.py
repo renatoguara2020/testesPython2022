@@ -8,7 +8,8 @@ class Funcionario(models.Model):
     nome = models.CharField(
         max_length=255,
         null=False,
-        blank=False
+        blank=False,
+        
     )
 
     sobrenome = models.CharField(
